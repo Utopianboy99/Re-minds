@@ -25,13 +25,11 @@ mongoose.connect(process.env.MONGO_URI, {
 // --- Route Imports ---
 const authRoutes = require('./routes/auth');    // Login/Register
 const taskRoutes = require('./routes/tasks');   // Task CRUD
-const taskRoutes = require('./routes/tasks');
 
 
 
 // --- Route Middleware ---
 app.use('/api/auth', authRoutes);
-app.use('/api/tasks', taskRoutes);
 app.use('/api/tasks', taskRoutes);
 
 
