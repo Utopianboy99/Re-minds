@@ -11,10 +11,17 @@ const taskSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
+    dueDate: {
+        type: Date,
+    },
     description: {
         type: String,
         trim: true
     },
+    completed: {
+        type: Boolean,
+        default: false,
+      }
 }, { timestamps: true });
 
 module.exports = mongoose.model('Task', taskSchema);

@@ -1,0 +1,153 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: url(img/Surreal\ Cloudscape\ in\ Vibrant\ Hues.jpeg);
+  padding: 100px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  /* background: white; */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* beginning of index.html page */
+
+.re-minds{
+  /* border:2px solid red; */
+  width:50%;
+  height:70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  border-radius:20px;
+  box-shadow: 2px 2px 10px rgba(216, 160, 218, 0.812);
+}
+
+#name{
+  color:white;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#description{
+  color:white;
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  /* border:2px solid red; */
+  padding:10px;
+  width:78%;
+  letter-spacing: 0.1px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin:50px 0px;
+}
+
+.buttons button{
+  width: 50%;
+  padding: 10px;
+  margin: 5px 50px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#login:hover{
+  background-color: rgb(218, 81, 104);
+  transition: 1s;
+  color:white
+}
+
+#signup:hover{
+  background-color: rgb(81, 163, 218);
+  transition: 1s;
+  color:white
+}
+
+/* ending of the idex.html */
+
+
+/* beggining of login.html */
+
+
+.container{
+  /* border:2px solid red; */
+  width:50%;
+  height:70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  border-radius:20px;
+  box-shadow: 2px 2px 10px rgba(216, 160, 218, 0.812);
+}
+
+#login-button{
+  border:none;
+  background-color: rgb(81, 163, 218);
+  /* transition:1s; */
+}
+
+#login-button:hover{
+  background-color: rgb(218, 81, 104);
+  transition: 500ms;
+  color:white;
+  border-radius:20px;
+}
+
+#signup-button{
+  border:none;
+  background-color: rgb(218, 81, 104);
+  /* transition:1s; */
+  color:white;
+}
+
+#signup-button:hover{
+  background-color: rgb(81, 163, 218);
+  transition: 500ms;
+  color:black;
+  border-radius:20px;
+}
