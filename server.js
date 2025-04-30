@@ -14,16 +14,14 @@ app.use(express.json()); // Allows JSON body parsing
 
 // Connect to MongoDB Atlas
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("✅ MongoDB Connected"))
-  .catch((err) => console.error("❌ MongoDB connection error:", err));
+    .then(() => console.log("✅ MongoDB Connected"))
+    .catch((err) => console.error("❌ MongoDB connection error:", err));
 
 
-  const path = require('path');
-  app.use(express.static(path.join(__dirname, 'public')));
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
 
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-  });
+
 
 // --- Route Imports ---
 const authRoutes = require('./routes/auth');    // Login/Register
@@ -41,7 +39,13 @@ app.use('/api/tasks', taskRoutes);
 app.get('/', (req, res) => {
     res.send('QuickTask Manager API is running.');
 });
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'login.html'));
+});
 
+app.get('/signup', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'signup.html'));
+});
 
 
 // Error Handling Middleware (optional but useful)
@@ -54,4 +58,8 @@ app.use((err, req, res, next) => {
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`🚀 Server running on port ${PORT}`);
+});
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
