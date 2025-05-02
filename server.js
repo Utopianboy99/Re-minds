@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
+//const cors = require('cors');
 const dotenv = require('dotenv');
 
 // Load environment variables
@@ -9,12 +9,12 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors({
-    origin: 'http://127.0.0.1:5500'
-}));
+//app.use(cors({
+//    origin: 'http://127.0.0.1:5500'
+//}));
 
 // app.use(cors());
-app.use(express.json()); // Allows JSON body parsing
+//app.use(express.json()); // Allows JSON body parsing
 
 // Connect to MongoDB Atlas
 mongoose.connect(process.env.MONGO_URI)
