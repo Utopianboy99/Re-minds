@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
 
-      const res = await fetch('/api/users/login', {
+      const res = await fetch('https://re-minds-production.up.railway.app/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
 
-      const res = await fetch('/api/users/register', {
+      const res = await fetch('https://re-minds-production.up.railway.app/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, password })
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const title = document.getElementById('title').value;
       const description = document.getElementById('description').value;
 
-      const response = await fetch('/api/tasks', {
+      const response = await fetch('https://re-minds-production.up.railway.app/api/tasks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
