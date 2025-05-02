@@ -48,9 +48,8 @@ router.get('/', auth, async (req, res) => {
   });
   
 
-module.exports = router;
-
-// @route   PUT /api/tasks/:id
+  
+  // @route   PUT /api/tasks/:id
 // @desc    Update a task by ID (only if user owns it)
 // @access  Private
 router.put('/:id', auth, async (req, res) => {
@@ -107,3 +106,5 @@ router.delete('/:id', auth, async (req, res) => {
         res.status(500).json({ msg: 'Server error' });
     }
 });
+
+        module.exports = router;
