@@ -13,7 +13,7 @@ app.use(cors({
     origin: 'http://127.0.0.1:5500'
 }));
 
-app.use(cors());
+// app.use(cors());
 app.use(express.json()); // Allows JSON body parsing
 
 // Connect to MongoDB Atlas
